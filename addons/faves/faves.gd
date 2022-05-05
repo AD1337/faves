@@ -17,7 +17,7 @@ func save_external_data():
 	var my_name = dock.items.my_name
 	if my_name != "" and my_name != null:
 		var file = File.new()
-		file.open("res://addons/faves/saved_list_name.sav", File.WRITE)
+		file.open("res://addons/faves/save/save.cfg", File.WRITE)
 		file.store_string(dock.items.my_name)
 		file.close()
 		

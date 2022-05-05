@@ -71,7 +71,7 @@ func _ready() -> void:
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
-			if !dir.current_is_dir():
+			if !dir.current_is_dir() and file_name != "save.cfg":
 				var title = file_name.trim_suffix(".tscn")
 				btn_cur_list.add_item(title)
 			file_name = dir.get_next()
@@ -80,7 +80,7 @@ func _ready() -> void:
 	
 	# Get the last opened list from a save file
 	var file = File.new()
-	file.open("res://addons/faves/saved_list_name.sav", File.READ)
+	file.open("res://addons/faves/save/save.cfg", File.READ)
 	var last_list:String = file.get_as_text()
 	file.close()
 	
