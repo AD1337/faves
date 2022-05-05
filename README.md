@@ -2,8 +2,8 @@
 
 A better implementation of the Favorites feature in Godot.
 
-[Features](#Features) — 
-[Installation](#Installation) — 
+[Features](# :muscle: Features) — 
+[Installation](## :file_folder: Installation) — 
 [Credits](#Credits)
 
 
