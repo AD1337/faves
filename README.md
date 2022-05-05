@@ -8,7 +8,7 @@ A better implementation of the Favorites feature in Godot.
 
 * A dock that sits in your Godot Editor and allows quick access to any file in your project.
 * Multiple favorites lists; you can have one for the player, one for UI, one for enemies, etc.
-* Add tasks to your favorite files. This works like a to-do list for each script, scene or resource.
+* Add tasks to your favorite files. Like a to-do list for each file!
 
 ## :file_folder: Installation
 
