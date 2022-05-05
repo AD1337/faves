@@ -1,16 +1,8 @@
 ![faves-cover](images/header.png)
 
-A better implementation of the Favorites feature in Godot.
-
-[Features](# :muscle: Features) — 
-[Installation](## :file_folder: Installation) — 
-[Credits](#Credits)
-
-
-
-
-
 # Faves 1.0 - ![Godot v3.4](https://img.shields.io/badge/godot-v3.4-%23478cbf)
+
+A better implementation of the Favorites feature in Godot.
 
 ## :muscle: Features
 
