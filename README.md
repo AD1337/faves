@@ -2,19 +2,19 @@
 
 A better implementation of the Favorites feature in Godot.
 
-[Features](#installation) — 
-[Installation](#installation) — 
-[Credits](#credits)
+[Features](#Features) — 
+[Installation](#Installation) — 
+[Credits](#Credits)
 
 
 
 
 
-# Version 1.0 - ![Godot v3.4](https://img.shields.io/badge/godot-v3.4-%23478cbf)
+# Faves 1.0 - ![Godot v3.4](https://img.shields.io/badge/godot-v3.4-%23478cbf)
 
 ## :muscle: Features
 
-* A dock that sits in your Godot Editor and allows you to drag favorite files into it.
+* A dock that sits in your Godot Editor and allows you to drag your favorite files into it.
 * Multiple favorites lists; you can have one for the player, one for UI, one for enemies, etc.
 * Add tasks to your favorite files. This works like a to-do list for each script, scene or resource.
 
