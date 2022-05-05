@@ -10,7 +10,7 @@ A better implementation of the Favorites feature in Godot.
 
 
 
-# Version 1.0 - [Godot v3.4](https://img.shields.io/badge/godot-v3.4-%23478cbf)
+# Version 1.0 - ![Godot v3.4](https://img.shields.io/badge/godot-v3.4-%23478cbf)
 
 ## :muscle: Features
 
