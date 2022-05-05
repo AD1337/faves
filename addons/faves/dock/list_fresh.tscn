@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/faves/dock/list.gd" type="Script" id=1]
+
+[node name="Items" type="VBoxContainer"]
+margin_right = 263.0
+margin_bottom = 382.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+
+[node name="Tutorial" type="Label" parent="."]
+margin_right = 263.0
+margin_bottom = 368.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Drag a file from the FileSystem dock"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Empty" type="MarginContainer" parent="."]
+margin_top = 372.0
+margin_right = 263.0
+margin_bottom = 382.0
+rect_min_size = Vector2( 0, 10 )
+mouse_filter = 1

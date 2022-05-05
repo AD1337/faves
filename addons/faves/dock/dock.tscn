@@ -1,0 +1,95 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/faves/dock/dock.gd" type="Script" id=1]
+[ext_resource path="res://addons/faves/dock/themes/theme1.tres" type="Theme" id=3]
+[ext_resource path="res://addons/faves/dock/task.tscn" type="PackedScene" id=4]
+
+[node name="Faves" type="MarginContainer"]
+margin_right = 263.0
+margin_bottom = 412.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+scene_task = ExtResource( 4 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+margin_right = 263.0
+margin_bottom = 412.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2"]
+margin_right = 263.0
+margin_bottom = 412.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2/VBoxContainer"]
+margin_right = 263.0
+margin_bottom = 26.0
+
+[node name="CurList" type="OptionButton" parent="VBoxContainer2/VBoxContainer/HBoxContainer"]
+margin_right = 247.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+
+[node name="Rename" type="Button" parent="VBoxContainer2/VBoxContainer/HBoxContainer"]
+visible = false
+margin_left = 235.0
+margin_right = 247.0
+margin_bottom = 26.0
+hint_tooltip = "Clear completed tasks."
+size_flags_horizontal = 0
+theme = ExtResource( 3 )
+
+[node name="NewList" type="Button" parent="VBoxContainer2/VBoxContainer/HBoxContainer"]
+margin_left = 251.0
+margin_right = 255.0
+margin_bottom = 26.0
+hint_tooltip = "Add new list."
+size_flags_horizontal = 0
+theme = ExtResource( 3 )
+
+[node name="Clear" type="Button" parent="VBoxContainer2/VBoxContainer/HBoxContainer"]
+margin_left = 259.0
+margin_right = 263.0
+margin_bottom = 26.0
+hint_tooltip = "Clear completed tasks."
+size_flags_horizontal = 0
+theme = ExtResource( 3 )
+
+[node name="ItemsContainer" type="ScrollContainer" parent="VBoxContainer2/VBoxContainer"]
+margin_top = 30.0
+margin_right = 263.0
+margin_bottom = 412.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LabelScript" type="Label" parent="VBoxContainer2"]
+visible = false
+margin_top = 398.0
+margin_right = 263.0
+margin_bottom = 412.0
+hint_tooltip = "Currently open script"
+mouse_filter = 1
+text = "Script"
+align = 1
+
+[node name="DialogNewList" type="AcceptDialog" parent="."]
+margin_right = 216.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+window_title = "New List"
+
+[node name="ListName" type="LineEdit" parent="DialogNewList"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 208.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 200, 0 )
+placeholder_text = "List name"
+
+[connection signal="pressed" from="VBoxContainer2/VBoxContainer/HBoxContainer/NewList" to="." method="_on_NewList_pressed"]
+[connection signal="pressed" from="VBoxContainer2/VBoxContainer/HBoxContainer/Clear" to="." method="_on_Clear_pressed"]
+[connection signal="confirmed" from="DialogNewList" to="." method="_on_DialogNewList_confirmed"]
+[connection signal="text_entered" from="DialogNewList/ListName" to="." method="_on_ListName_text_entered"]
